@@ -1,0 +1,17 @@
+    .one, .two, .three {
+        height: 50px;
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+    }
+    .one {
+        background-color: red;
+    }
+
+    .two {
+        background-color: blue;
+    }
+
+    .three {
+        background-color: yellow;
+    }
