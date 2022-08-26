@@ -6,9 +6,9 @@ sexo = input("Informe o sexo da pessoa: ")
 
 if sexo == "m":
     peso = round(((72.7 * altura) - 58), 2)
-    print("\nA altura ideal é de {0}Kg.".format(peso))
+    print("\nO peso ideal é de {0}Kg.".format(peso))
 elif sexo == "f":
     peso = round(((62.1 * altura) - 44.7), 2)
-    print("\nA altura ideal é de {0}Kg.".format(peso))
+    print("\nO peso ideal é de {0}Kg.".format(peso))
 else:
     print("\nEntrada inválida")
