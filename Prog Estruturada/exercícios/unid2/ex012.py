@@ -3,10 +3,9 @@
 
 for num in range(1, 30):
   if num % 2 != 0:
-    print(str(num) + "\n")
-
-for num in range(1, 30):
-  if num % 2 != 0:
     print(str(num))
+
+print(list(range(1,30,1)))
+
 
 
