@@ -1,36 +1,4 @@
-# Agenda de Contatos
-agenda = {}
-
-
-def adiciona(nome, tel):
-    agenda[nome] = tel
-
-
-def mostraContato(nome):
-    if nome in agenda:
-        print(nome.capitalize(), end=' ')
-        print(agenda[nome])
-    else:
-      print('Contato não encontrado')
-
-
-def mostraLista():
-    if len(agenda) == 0:
-        print('Agenda Vazia!')
-    else:
-        for contato in agenda.items():
-            print(*contato)
-
-
-def apagaContato(nome):
-    if nome in (agenda):
-        agenda.pop(nome)
-    else:
-      print('Contato não encontrado')
-
-def apagaTodosContatos():
-    agenda.clear()
-
+import modulo_agenda as agenda
 
 print('-'*30)
 print('     Agendar de Contatos')
@@ -50,26 +18,27 @@ while True:
     nome = input('Digite o nome:')
     tel = int(input('Digite o telefone:'))
     nome = nome.lower()
-    adiciona(nome,tel)
+    agenda.adiciona(nome,tel)
     print("Contato Adicionado!")
   elif op == 2:
     nome = input('Digite o nome para a pesquisa:')
     nome = nome.lower()
     print('-'*30)
-    mostraContato(nome)
+    agenda.mostraContato(nome)
     print('-'*30)
   elif op == 3:
     print('-'*30)
     print('     Todos os contatos')
-    mostraLista()
+    agenda.mostraLista()
     print('-'*30)
   elif op == 4:
     nome = input('Digite o nome para a pesquisa:')
-    apagaContato(nome)
+    agenda.apagaContato(nome)
   elif op == 5:
-    apagaTodosContatos()
+    agenda.apagaTodosContatos()
     print("Todos contatos foram deletados!")
   elif op == 6:
+    agenda.gravaAgenda()
     break
   else:
     print('Digite a opção correta!')
