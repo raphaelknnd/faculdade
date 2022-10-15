@@ -11,7 +11,7 @@ MIN, MAX: inteiro const
 
 Inicio
 MIN <- 0
-MAX <- 2
+MAX <- 9
 
 para count de MIN ate MAX faca
      escreva("Informe o sexo da ", count + 1, "ª pessoa (masculino = 0 | feminino = 1: ")
