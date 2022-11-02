@@ -33,6 +33,8 @@ def adiciona(nome, tel):
         """)
         connection.commit()
         print("Contato Adicionado!")
+
+        connection.close()
     except:
         print("Eroooou!")
 
@@ -44,6 +46,8 @@ def mostraContato(nome):
         SELECT * FROM contatos WHERE nome = "{nome}";
         """).fetchall()
         print('\n'.join(map(lambda x: str(x[0]) + ' ' + str(x[1]) + ' ' + str(x[2]), contato)))
+
+        connection.close()
     except:
         print('Contato não encontrado')
 
@@ -67,6 +71,8 @@ def apagaContato(nome):
         """)
         connection.commit()
         print("contato apagado")
+
+        connection.close()
     except:
         print('Contato não encontrado')
 
@@ -76,5 +82,6 @@ def apagaTodosContatos():
 
     cursor.execute("DELETE FROM contatos")
     connection.commit()
-    print('Agenda apagada')
+
+    connection.close()
 
