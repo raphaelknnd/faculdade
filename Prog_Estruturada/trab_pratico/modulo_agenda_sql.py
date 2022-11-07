@@ -26,7 +26,7 @@ def get_connection():
              fone TEXT
     );
     """)
-    # retorna a conexão
+    #retorna a conexãoA
     return connection
 
 
