@@ -41,14 +41,18 @@ public class Produto {
      *quantidade recebida como parâmetro. */
 
     public void vender(int amount){
-        if(getQuantidadeEmEstoque() == 0){
-            System.out.println("Estoque zerado");
+        if(amount <= 0){
+            System.out.println("Entrada inválida.");
         }else{
-            if(amount > getQuantidadeEmEstoque()){
-                System.out.println("Pedido superior ao estoque. Quant. em estoque = " + getQuantidadeEmEstoque());
+            if(getQuantidadeEmEstoque() == 0){
+                System.out.println("Estoque zerado");
             }else{
-                setQuantidadeEmEstoque(getQuantidadeEmEstoque() - amount);
-                System.out.println("Venda confirmada.");
+                if(amount > getQuantidadeEmEstoque()){
+                    System.out.println("Pedido superior ao estoque. Quant. em estoque = " + getQuantidadeEmEstoque());
+                }else{
+                    setQuantidadeEmEstoque(getQuantidadeEmEstoque() - amount);
+                    System.out.println("Venda confirmada.");
+                }
             }
         }
         
